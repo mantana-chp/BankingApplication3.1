@@ -13,10 +13,12 @@ public class SavingsAccount implements Account {
         this.balance = balance;
     }
 
+    @Override
     public int getAccountNumber() {
         return this.accountNumber;
     }
 
+    @Override
     public String getAccountName() {
         return this.accountName;
     }

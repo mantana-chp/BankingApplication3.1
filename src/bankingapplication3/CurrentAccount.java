@@ -1,4 +1,3 @@
-
 package bankingapplication3;
 
 public class CurrentAccount implements Account {
@@ -17,33 +16,39 @@ public class CurrentAccount implements Account {
     }
 
     @Override
+    public int getAccountNumber() {
+        return this.accountNumber;
+    }
+
+    public String getAccountName() {
+        return this.accountName;
+    }
+
+    public double getMinimum() {
+        return this.minimum;
+    }
+
+    public void setMinimum(double minimum) {
+        this.minimum = minimum;
+    }
+
+    @Override
     public void deposit(double amount) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.balance = this.balance - amount;
     }
 
     @Override
     public void withdraw(double amount) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public double getBalance() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public String getAccountType() {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public int getAccountNumber() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public String getAccountName() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.balance = this.balance - amount;
     }
     
+    @Override
+    public double getBalance(){
+        return this.balance;
+    }
+    
+    @Override
+    public String getAccountType(){
+        return this.accountType;
+    }
 }

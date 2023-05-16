@@ -48,7 +48,7 @@ public class Bank {
 
     public void closeAccount(Account account) {
         Connection con = BankConnection.connect();
-        String sql = "delete from account where accID = ? AND accType = ?";
+        String sql = "DELETE FROM account WHERE accID = ? AND accType = ?";
         try {
             PreparedStatement preparedStatement = con.prepareStatement(sql);
             preparedStatement.setInt(1, account.getAccountNumber());
